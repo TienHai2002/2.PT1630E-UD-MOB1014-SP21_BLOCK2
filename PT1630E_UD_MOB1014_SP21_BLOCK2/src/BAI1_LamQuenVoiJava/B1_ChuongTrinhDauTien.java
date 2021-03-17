@@ -11,7 +11,7 @@ package BAI1_LamQuenVoiJava;
  *
  * @author Dungna29
  */
-public class S1_ChuongTrinhDauTien {
+public class B1_ChuongTrinhDauTien {
     // C1. Ctrl + Space gõ main
     // C2. psvm + tab
     
