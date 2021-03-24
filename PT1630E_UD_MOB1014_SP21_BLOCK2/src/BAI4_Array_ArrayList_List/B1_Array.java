@@ -73,12 +73,6 @@ public class B1_Array {
         }
         // c) while
         
-        /*
-            //Bài 1: Viết 1 chương trình cho người dùng nhập vào 1 mảng tên sau đó in ra màn hình
-            //Bài 2: Viết 1 chương trình nhập vào 1 mảng thông tin sinh viên gồm các thông tin sau
-            Tên, Mã SV, Điểm. Sau đó in tất cả các thông tin sinh viên ra màn hình
-            //Bài 3: Viết 1 chương trình nhập bảng cửu chương theo khoảng do người dùng mong muốn.
-            
-        */
+      
     }
 }
