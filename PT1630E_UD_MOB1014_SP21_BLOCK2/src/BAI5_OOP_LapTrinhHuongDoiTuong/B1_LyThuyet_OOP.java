@@ -70,6 +70,9 @@ public class B1_LyThuyet_OOP {
 
      */
     public static void main(String[] args) {
+        /*
+        Khi chưa học OOP thì chúng ta chỉ có thể sử dụng biến để lưu trữ thông tin giả sử phải lưu trữ thông tin của 500 sinh viên.
+        */
         //Khai báo 1 thông tin sinh viên
         String ten, sdt, queQuan, input;
         int namsinh;
@@ -85,10 +88,10 @@ public class B1_LyThuyet_OOP {
         
         //2. Gán giá trị cho đối tượng
         //Khi đã Private các thuộc tính sẽ không thể gọi trực tiếp các thuộc tính này
-//        sv1.name = "Dũng";//Gán thuộc tính tên có giá trị là Dũng
-//        sv1.msv = "ph00532";
-//        sv1.tuoi = 25;
-//        sv1.nganhHoc = "UDPM-JAVA";
+        //        sv1.name = "Dũng";//Gán thuộc tính tên có giá trị là Dũng
+        //        sv1.msv = "ph00532";
+        //        sv1.tuoi = 25;
+        //        sv1.nganhHoc = "UDPM-JAVA";
         
         //Dùng Getter và Setter để gán giá trị cho đối tượng
         sv1.setName("Long");
