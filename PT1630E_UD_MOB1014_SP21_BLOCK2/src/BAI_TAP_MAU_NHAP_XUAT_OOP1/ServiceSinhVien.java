@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BAI_TAP_MAU_CRUD_DOI_TUONG;
+package BAI_TAP_MAU_NHAP_XUAT_OOP1;
 
 import java.util.Scanner;
 
@@ -60,7 +60,8 @@ public class ServiceSinhVien {
         _input = _sc.nextLine();
         //Khởi tạo mảng sinh viên
         arrSinhViens = new SinhVien[Integer.parseInt(_input)];
-        for (int i = 0; i < arrSinhViens.length; i++) {
+        for (int i = 0; i < Integer.parseInt(_input); i++) {
+             arrSinhViens[i] = new SinhVien();
             System.out.print("Mời bạn nhập tên: ");
             arrSinhViens[i].setTen(_sc.nextLine());
             System.out.print("Mời bạn nhập mã: ");
