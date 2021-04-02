@@ -31,11 +31,12 @@ public class SinhVien {//Tạo ra 1 Class đối tượng là SinhVien bắt bu�
     }
     
     //Contructor có tham số
-    public SinhVien(String name, String msv, int tuoi, String nganhHoc) {
-        this.name = name;
+    public SinhVien(String namE, String msv, int tuoi, String nganhHoc) {
+        name = namE;
         this.msv = msv;
         this.tuoi = tuoi;
-        this.nganhHoc = nganhHoc;
+        this.nganhHoc = nganhHoc;      
+        //this dùng để tham chiếu đến thuộc tính hoặc phương thức của lớp hiện tại
     }
   
     

@@ -5,6 +5,8 @@
  */
 package BAI_TAP_MAU_NHAP_XUAT_OOP1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -13,12 +15,15 @@ import java.util.Scanner;
  */
 public class ServiceSinhVien {
 
+    //Biến toàn cục luôn được khai báo trên đầu dưới Class
     Scanner _sc = new Scanner(System.in);
-    SinhVien _sv;
+    List<SinhVien> _lstSinhViens;//Khai báo
+    SinhVien _sv;//Khai báo    
     String _input;
     SinhVien[] arrSinhViens;//Khai báo mảng
 
     public ServiceSinhVien() {
+        _lstSinhViens = new ArrayList<>();//Khởi tạo khi ServiceSinhVien được gọi
     }
 
     //Tạo 1 sinh viên bằng 2 cách sử dụng Conctructor có tham số và không tham số
@@ -61,7 +66,7 @@ public class ServiceSinhVien {
         //Khởi tạo mảng sinh viên
         arrSinhViens = new SinhVien[Integer.parseInt(_input)];
         for (int i = 0; i < Integer.parseInt(_input); i++) {
-             arrSinhViens[i] = new SinhVien();
+            arrSinhViens[i] = new SinhVien();
             System.out.print("Mời bạn nhập tên: ");
             arrSinhViens[i].setTen(_sc.nextLine());
             System.out.print("Mời bạn nhập mã: ");
@@ -78,6 +83,45 @@ public class ServiceSinhVien {
         for (var x : arrSinhViens) {
             x.inRaManHinh();
             //x là tên biến và đại diện cho 1 đối tượng được lưu bên trong mảng
+        }
+    }
+
+    //Viết 1 phương thêm đối tượng sử dụng List<SinhVien>
+    void bai4ThemNhieuSinhVienList() {
+        System.out.println("Bạn muốn thêm bao nhiêu SV: ");
+        _input = _sc.nextLine();
+        for (int i = 0; i < Integer.parseInt(_input); i++) {
+            SinhVien sv1 = new SinhVien();
+            System.out.print("Mời bạn nhập tên: ");
+            sv1.setTen(_sc.nextLine());
+            System.out.print("Mời bạn nhập mã: ");
+            sv1.setMaSv(_sc.nextLine());
+            System.out.print("Mời bạn nhập năm sinh: ");
+            sv1.setNamSinh(Integer.parseInt(_sc.nextLine()));
+            System.out.print("Mời bạn nhập điểm: ");
+            sv1.setDiemJava(Double.parseDouble(_sc.nextLine()));            
+            _lstSinhViens.add(sv1);//Sau khi nhập giá trị cho sv1 tiến hành thêm đối tượng vào List
+        }
+    }
+    void bai4ThemNhieuSinhVienList1() {
+       
+        _input = getValueInput("thêm bao nhiêu SV: ");
+        for (int i = 0; i < Integer.parseInt(_input); i++) {
+            SinhVien sv1 = new SinhVien();           
+            sv1.setTen(getValueInput("nhập tên: "));            
+            sv1.setMaSv(getValueInput("nhập mã: "));          
+            sv1.setNamSinh(Integer.parseInt(getValueInput("nhập năm sinh: ")));            
+            sv1.setDiemJava(Double.parseDouble(getValueInput("nhập điểm: ")));            
+            _lstSinhViens.add(sv1);//Sau khi nhập giá trị cho sv1 tiến hành thêm đối tượng vào List
+        }
+    }
+    String getValueInput(String text){
+        System.out.println("Mời bạn " + text);//text tham số dùng để hiển thị tùy biến
+        return _sc.nextLine();//Trả về kiểu dữ liệu String
+    }
+    void bai4GetListSV(){
+        for (SinhVien x : _lstSinhViens) {
+            x.inRaManHinh();
         }
     }
 }

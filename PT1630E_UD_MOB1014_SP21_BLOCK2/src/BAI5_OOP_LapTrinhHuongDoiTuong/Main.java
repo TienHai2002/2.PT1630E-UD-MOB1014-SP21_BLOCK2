@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
-
 /**
  *
  * @author Dungna29
@@ -18,53 +16,51 @@ import java.util.Collections;
 public class Main {
 
     public static void main(String[] args) {
-        List lstName = new ArrayList();
-        //Phần 1: Khai báo ArrayList không định kiểu
-        List arrListKhongDinhKieu;//Khai báo
-        arrListKhongDinhKieu = new ArrayList();
+        /*
+        Phần 1: Sử dụng phương thức không trả về không tham số
+            - Cần phải biết tên phương thức và vị trí của phương thức nằm trong class nào
+            - Khi gọi phương thức phải kết thúc bằng dấu ();
+         */
+        B2_Method_PhuongThucKhongTraVe b2 = new B2_Method_PhuongThucKhongTraVe();
+        //b2.tinhTong();
 
-        //Có định kiểu
-        List<String> arrListString = new ArrayList<>();
-        List<Double> arrListDouble = new ArrayList<>();
-        List<Integer> arrListInteger = new ArrayList<>();
-        //Phần 2: Gán giá trị cho ArrayList
-        arrListKhongDinhKieu.add("JAVA1");
-        arrListKhongDinhKieu.add(1);
-        arrListKhongDinhKieu.add(1.6);
-        arrListKhongDinhKieu.add(true);
+        /*
+        Phần 2: Sử dụng phương không trả về có tham số
+            - Truyền đúng vị trí của tham số
+            - Truyền đủ tham số
+            - Truyền đúng kiểu dữ liệu cho tham số
+        [KHI NẠP CHỒNG PHƯƠNG THỨC DỰA VÀO SỐ LƯỢNG THAM SỐ ĐỂ XÁC ĐỊNH PHƯƠNG THỨC NÀO 
+        SẼ ĐƯỢC SỬ DỤG]
+         */
+        //b2.tinhTong(0);Lỗi thiếu tham số truyền vào
+        //b2.tinhTong("5","5");Lỗi truyền kiểu dữ liệu cho tham số
+        //b2.tinhTong(5, 5);
+        //b2.tinhTong(5, 5, 5);
+        //b2.tinhTong(5, 5, 5, 5);
+        /*
+        Phần 3: Sử dụng phương trả về không tham số
+            - Cần phải biết tên phương thức và vị trí của phương thức nằm trong class nào
+            - Phương thức trả về là 1 giá trị hoặc tập giá trị hoặc.........
+         */
+        B3_Method_HamTraVe b3 = new B3_Method_HamTraVe();
+        //b3.tinhTong();//Cả phương thứ cày là 1 giá trị kiểu số nguyên
+        System.out.println(b3.tinhTong());
 
-        arrListString.add("Z");
-        arrListString.add("W");
-        arrListString.add("U");
-        arrListString.add("A");
-        arrListString.add(0, "B");//Đẩy vào vị trí 0
-
-        //Phần 3: Lấy giá trị cần biết index
-        System.out.println(arrListString.get(0));
-        System.out.println(arrListString.get(1));
-        for (int i = 0; i < arrListString.size(); i++) {
-            System.out.println(arrListString.get(i));
-        }
-
-        //Ngoài ra còn 1 vài phương thức khác hay sử dụng
-        System.out.println(arrListString.isEmpty());
-        if (arrListString.isEmpty()) {
-            System.out.println("Danh sách đang Empty");
-        }
-
-        arrListString.remove(0);//Xóa phần tử ở vị trí số 0
-        System.out.println(arrListString.get(0));
-
-        //arrListString.clear();
-        System.out.println("------------------------------");
-        for (int i = 0; i < arrListString.size(); i++) {
-            System.out.println(arrListString.get(i));
-        }
-        Collections.sort(arrListString);
-        System.out.println("-------------------------");
-         for (int i = 0; i < arrListString.size(); i++) {
-            System.out.println(arrListString.get(i));
-        }
+        /*
+        Phần 4: Sử dụng phương thức trả về có tham số
+            - Truyền đúng vị trí của tham số
+            - Truyền đủ tham số
+            - Truyền đúng kiểu dữ liệu cho tham số
+        [KHI NẠP CHỒNG PHƯƠNG THỨC DỰA VÀO SỐ LƯỢNG THAM SỐ ĐỂ XÁC ĐỊNH PHƯƠNG THỨC NÀO 
+        SẼ ĐƯỢC SỬ DỤG]
+         */
+        System.out.println("Tổng 2 số là: " + b3.tinhTong(5, 5));
+        System.out.println("Tổng 3 số là: " + b3.tinhTong(5, 5,5));
         
+        //Ví dụ thêm phương thức trả về:
+        for (int x : b3.method1()) {
+            System.out.print(x);
+        }
+        b3.method2().inThongTinSV();
     }
 }
