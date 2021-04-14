@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BAI_TAP_MAU_CRUD_OOP2;
+package BAI_TAP_MAU_CRUD_OOP2_INTERFACE_Abstract1;
 
 /**
  *
  * @author Dungna29
  */
-public abstract class Person {//Tạo lớp cha
+public class Person {//Tạo lớp cha
     private String ten;
     private String sdt;
     private String email;
@@ -52,6 +52,8 @@ public abstract class Person {//Tạo lớp cha
         return "Person{" + "ten=" + ten + ", sdt=" + sdt + ", email=" + email + '}';
     }
     
-    public abstract void inRaManHinh();
+    public void inRaManHinh(){
+        
+    }
     
 }

@@ -15,6 +15,7 @@ public class ServiceStudent implements IServiceStudent{
 
     IServiceGiaoVien iServiceGiaoVien = (IServiceGiaoVien) new ServiceGiaoVien();
     public ServiceStudent() {
+        iServiceGiaoVien.getListGiaoVien();
     }
 
     
