@@ -11,4 +11,9 @@ package BAI_TAP_MAU_CRUD_OOP2_INTERFACE_Abstract1;
  */
 public class ServiceGiaoVien {
     IServiceStudent _iServiceStudent = new ServiceStudent();
+
+    public ServiceGiaoVien() {
+        _iServiceStudent.getListStudent();
+    }
+    
 }

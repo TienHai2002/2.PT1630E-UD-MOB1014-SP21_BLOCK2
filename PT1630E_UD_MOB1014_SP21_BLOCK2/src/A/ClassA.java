@@ -23,4 +23,9 @@ public class ClassA {
         c = 3;
         d = 4;
     }
+    public static void main(String[] args) {
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Chào các bạn đến với môn java 1");
+        }
+    }
 }

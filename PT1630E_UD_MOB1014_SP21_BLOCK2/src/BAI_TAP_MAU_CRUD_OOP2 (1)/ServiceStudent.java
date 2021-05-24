@@ -131,10 +131,11 @@ public class ServiceStudent {
 //                }
 //            }
 //        });
-        
+
         //Cách 2 : Dùng biểu thức lamda để sắp xếp
         _lstStudents.sort((o1, o2) -> o1.getTen().compareTo(o2.getTen()));
-
+        Collections.sort(_lstStudents, Comparator.comparing(Student::getDiemJava));
+        Collections.reverse(_lstStudents);//Đảo ngược danh sách
         //Lambda expression for sorting theo điểm
         //_lstStudents.sort((Student s1, Student s2)->s1.getDiemJava()-s2.getDiemJava()); 
     }
@@ -177,4 +178,16 @@ public class ServiceStudent {
 //            }
 //        }
 //    }
+    
+      private int getIndexObj1(int msv) {
+        for (int i = 0; i < _lstStudents.size(); i++) {
+//            if (Integer.parseInt(_lstStudents.get(i).getMsv())==msv) {
+//                return i;
+//            }
+            if (_lstStudents.get(i).getMsv().equalsIgnoreCase(String.valueOf(msv))) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

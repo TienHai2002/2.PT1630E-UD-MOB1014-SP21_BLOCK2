@@ -11,6 +11,7 @@ import BAI7_KeThua.*;
  *
  * @author Dungna29
  */
+
  /*
     - Từ khóa abstract đứng trước Class gọi là lớp trừu tượng
     - Trong lớp phải có 1 phương thức abstract
